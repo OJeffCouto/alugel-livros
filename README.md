@@ -49,6 +49,12 @@ Adicionei janelas de diálogo nativas para evitar ações acidentais:
 * **`confirm()`**: Retorna um valor booleano, garantindo que a alteração de status só ocorra com a concordância do usuário.
 * **`alert()`**: Exibe mensagens personalizadas de feedback caso o usuário cancele a operação (ex: "Continue Lendo" ou "Deseja alugar o livro ...").
 
+### 3. Contagem de livros alugados no momento
+
+Adicionei uma função `contagem()` que conta quantos livros estão alugados no momento: 
+
+* Adicionado trecho no código que identifica ao iniciar se há um livro alugado no momento pela classe `'.dashboard__item__img--rented'`.
+
 ## 💻 Tecnologias Utilizadas
 
 * **HTML5**: Estruturação semântica.
