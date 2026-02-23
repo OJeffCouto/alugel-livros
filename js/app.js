@@ -1,3 +1,9 @@
+let contagemLivros = 1;
+
+function contagem() {
+    console.log(`Total de livros alugados ${contagemLivros}`)
+}
+
 function alterarStatus(id) {
     let livroClicado = document.getElementById(`livro-${id}`);
     let imagem = livroClicado.querySelector('.dashboard__item__img');
@@ -10,6 +16,7 @@ function alterarStatus(id) {
             imagem.classList.remove('dashboard__item__img--rented');
             botao.textContent = 'Alugar';
             botao.classList.remove('dashboard__item__button--return');
+            contagemLivros--
         } else {
             alert("Continue lendo, devolva quando possível.");
         }
@@ -19,12 +26,12 @@ function alterarStatus(id) {
             imagem.classList.add('dashboard__item__img--rented');
             botao.textContent = 'Devolver';
             botao.classList.add('dashboard__item__button--return');
+            contagemLivros++
         } else {
             alert("A opção de aluguel deste título ainda poderá ser feita no futuro.");
         }
     }
-    
-  
+    contagem()
 }
 
 
