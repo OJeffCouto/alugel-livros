@@ -1,4 +1,4 @@
-let contagemLivros = 1;
+let contagemLivros = 0;
 
 function contagem() {
     console.log(`Total de livros alugados ${contagemLivros}`)
@@ -34,5 +34,7 @@ function alterarStatus(id) {
     contagem()
 }
 
-
-alterarStatus();
+document.addEventListener('DOMContentLoaded', function() {
+    contagemLivros = document.querySelectorAll('.dashboard__item__img--rented').length;
+    contagem();
+})
