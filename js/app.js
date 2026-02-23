@@ -1,11 +1,11 @@
 function alterarStatus(id) {
-    let gameClicado = document.getElementById(`livro-${id}`);
-    let imagem = gameClicado.querySelector('.dashboard__item__img');
-    let botao = gameClicado.querySelector('.dashboard__item__button');
-    let nomeJogo = gameClicado.querySelector('.dashboard__item__name');
+    let livroClicado = document.getElementById(`livro-${id}`);
+    let imagem = livroClicado.querySelector('.dashboard__item__img');
+    let botao = livroClicado.querySelector('.dashboard__item__button');
+    let nomeLivro = livroClicado.querySelector('.dashboard__item__name');
 
     if (imagem.classList.contains('dashboard__item__img--rented')) {
-        var confirmar = confirm(`Deseja devolver o livro ${nomeJogo.textContent}?`);
+        var confirmar = confirm(`Deseja devolver o livro ${nomeLivro.textContent}?`);
         if (confirmar) {
             imagem.classList.remove('dashboard__item__img--rented');
             botao.textContent = 'Alugar';
@@ -14,7 +14,7 @@ function alterarStatus(id) {
             alert("Continue lendo, devolva quando possível.");
         }
     } else {
-        var confirmar = confirm(`Deseja alugar o livro ${nomeJogo.textContent}?`);
+        var confirmar = confirm(`Deseja alugar o livro ${nomeLivro.textContent}?`);
         if (confirmar) {
             imagem.classList.add('dashboard__item__img--rented');
             botao.textContent = 'Devolver';
